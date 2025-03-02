@@ -143,7 +143,9 @@ def plot_network_heatmap(data):
     # Improve layout
     fig.update_layout(
         height=500,
-        xaxis={'side': 'top'}
+        xaxis={'side': 'top'},
+        # Added more top margin to create space between title and content
+        margin=dict(t=120)
     )
 
     return fig
