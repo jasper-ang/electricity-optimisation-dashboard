@@ -267,4 +267,4 @@ with col2:
 
 # Footer
 st.markdown("---")
-st.markdown("© 2023 AI-Powered Network Energy Optimization | Dashboard v1.0")
+st.markdown("© 2025 AI-Powered Network Energy Optimization | Dashboard v1.0")
