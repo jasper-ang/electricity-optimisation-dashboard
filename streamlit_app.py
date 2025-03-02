@@ -11,6 +11,7 @@ import plotly.graph_objects as go
 from datetime import datetime, timedelta
 import math
 from pathlib import Path
+from streamlit.components.v1 import html
 
 # Add the utils folder to path
 sys.path.append(os.path.join(os.path.dirname(__file__), 'utils'))
@@ -22,8 +23,26 @@ st.set_page_config(
     page_title="AI-Powered Network Energy Optimization",
     page_icon="⚡",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="expanded",
+    menu_items={
+        'Get Help': 'https://github.com/yourusername/electricity-optimisation-dashboard/wiki',
+        'Report a bug': 'https://github.com/yourusername/electricity-optimisation-dashboard/issues',
+        'About': "# AI-Powered Network Energy Optimization\nThis dashboard provides insights and recommendations for optimizing energy consumption in network infrastructure."
+    }
 )
+
+# Add custom HTML metatags
+meta_tags = """
+    <head>
+        <meta charset="UTF-8">
+        <meta name="description" content="AI-powered dashboard for optimizing electricity consumption in network infrastructure">
+        <meta name="keywords" content="AI, energy optimization, network, electricity, carbon footprint, data center, sustainability">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta property="og:title" content="AI-Powered Network Energy Optimization">
+        <meta property="og:description" content="Discover insights and recommendations to reduce energy consumption in your network infrastructure">
+    </head>
+"""
+html(meta_tags)
 
 # Custom CSS
 st.markdown("""
